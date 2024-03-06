@@ -78,6 +78,8 @@ for (let i = 0; i < n; i++){
     li.style.aspectRatio = 1;
     li.style.backgroundColor = color;
     li.style.listStyle = "none";
+    li.style.textAlign = "center"
+    li.style.lineHeight = "80px"
     ulElement.append(li)
     console.log(li);
 }
