@@ -75,7 +75,9 @@ for (let i = 0; i < n; i++){
     console.log("Risultato ", risultato)
     li.innerHTML = risultato;
     console.dir(li)
-    li.style.color = color;
+    li.style.aspectRatio = 1;
+    li.style.backgroundColor = color;
+    li.style.listStyle = "none";
     ulElement.append(li)
     console.log(li);
 }
