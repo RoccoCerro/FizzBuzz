@@ -46,6 +46,7 @@ for (let i = 0; i < n; i++){
     
     const li = document.createElement("li");
     let risultato = num;
+    let color = "#1389B2";
     let modulo3 = num % 3;
     let modulo5 = num % 5;
     console.log("Valore dei moduli ",modulo3,modulo5)
@@ -53,14 +54,17 @@ for (let i = 0; i < n; i++){
     if (modulo3 === 0 && modulo5 === 0){
         console.log("FizzBuzz");
         risultato = "FizzBuzz";
+        color = "#F0466F";
     }
     else if (modulo3 === 0){
         console.log("Fizz");
         risultato = "Fizz";
+        color = "#FFD166"
     }
     else if (modulo5 === 0){
         console.log("Buzz");
         risultato = "Buzz";
+        color = "#0CD6A1"
     }
      
     // else {
@@ -70,6 +74,8 @@ for (let i = 0; i < n; i++){
 
     console.log("Risultato ", risultato)
     li.innerHTML = risultato;
+    console.dir(li)
+    li.style.color = color;
     ulElement.append(li)
     console.log(li);
 }
