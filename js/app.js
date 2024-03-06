@@ -39,35 +39,37 @@
 
 let n = 100;
 const ulElement = document.querySelector("ul");
-const li = document.createElement("li");
-let risultato;
 
 for (let i = 0; i < n; i++){
     let num = i + 1;
     console.log("Valore della i =",num);
-
+    
+    const li = document.createElement("li");
+    let risultato = num;
     let modulo3 = num % 3;
     let modulo5 = num % 5;
     console.log("Valore dei moduli ",modulo3,modulo5)
-
-    if (modulo3 === 0 && modulo5 !== 0){
-        console.log("Fizz");
-        risultato = "Fizz";
-    }
-    else if (modulo5 === 0 && modulo3 !== 0){
-        console.log("Buzz");
-        risultato = "Buzz";
-    }
-    else if (modulo3 === 0 && modulo5 === 0){
+    
+    if (modulo3 === 0 && modulo5 === 0){
         console.log("FizzBuzz");
         risultato = "FizzBuzz";
     }
-    else {
-        console.log(num);
-        risultato = num;
+    else if (modulo3 === 0){
+        console.log("Fizz");
+        risultato = "Fizz";
     }
+    else if (modulo5 === 0){
+        console.log("Buzz");
+        risultato = "Buzz";
+    }
+     
+    // else {
+    //     console.log(num);
+    //     risultato = num;
+    // }
 
     console.log("Risultato ", risultato)
     li.innerHTML = risultato;
+    ulElement.append(li)
     console.log(li);
 }
