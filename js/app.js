@@ -20,3 +20,25 @@
                         // log(FizzBuzz)
                     // ALTRIMENTI 
                         // log(num)
+
+for (let i = 0; i <100; i++){
+    let num = i + 1;
+    console.log("Valore della i =",num);
+
+    let modulo3 = num % 3;
+    let modulo5 = num % 5;
+    console.log("Valore dei moduli ",modulo3,modulo5)
+
+    if (modulo3 === 0 && modulo5 !== 0){
+        console.log("Fizz");
+    }
+    else if (modulo5 === 0 && modulo3 !== 0){
+        console.log("Buzz");
+    }
+    else if (modulo3 === 0 && modulo5 === 0){
+        console.log("FizzBuzz");
+    }
+    else {
+        console.log(num);
+    }
+}
