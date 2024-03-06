@@ -1,8 +1,10 @@
+// ESERCIZIO
 // Scrivi un programma che stampi in console i numeri da 1 a 100, ma che:
 // per i multipli di 3 stampi “Fizz” al posto del numero e
 // per i multipli di 5 stampi “Buzz” al post del numero.
 // Per i numeri che sono sia multipli di 3 che di 5 stampi “FizzBuzz” al posto del numero.
 
+// PSEUDOCODICE
 // Stampare in console i numeri da 1 a 100
     // Creo un ciclo for 
         // Apro il ciclo for, creo la variabile i, inserisco la condizione i < 100, incremento i di 1 ogni volta che si ripete il ciclo.
@@ -20,8 +22,27 @@
                         // log(FizzBuzz)
                     // ALTRIMENTI 
                         // log(num)
+// BONUS1
+// Crea un container nel DOM , aggiungendo un elemento html con il numero o la stringa corretta da mostrare.
+// Potete usare innerHTML oppure il metodo append creando l’elemento come oggetto usando createElement
 
-for (let i = 0; i <100; i++){
+// PSEUDOCODICE
+// Creo un container nell'html
+// Creo una ul nel container
+// Creo una variabile ulElement con cui selezionerò l' ul creata nel dom
+// Creo un li come oggetto da inserire nell'ul del dom (ulElement)
+    // Creo una variabile (li) in cui inserisco l'oggetto "li" con la funzione createelement
+// Inserisco il valore che esce dall'if nel li 
+    // Creo una variabile (risultato) in cui inserirò il valore ricevuto dall'if 
+    // li.innerhtml = risultato
+// Appendo l'li nell'ul
+
+let n = 100;
+const ulElement = document.querySelector("ul");
+const li = document.createElement("li");
+let risultato;
+
+for (let i = 0; i < n; i++){
     let num = i + 1;
     console.log("Valore della i =",num);
 
@@ -31,14 +52,22 @@ for (let i = 0; i <100; i++){
 
     if (modulo3 === 0 && modulo5 !== 0){
         console.log("Fizz");
+        risultato = "Fizz";
     }
     else if (modulo5 === 0 && modulo3 !== 0){
         console.log("Buzz");
+        risultato = "Buzz";
     }
     else if (modulo3 === 0 && modulo5 === 0){
         console.log("FizzBuzz");
+        risultato = "FizzBuzz";
     }
     else {
         console.log(num);
+        risultato = num;
     }
+
+    console.log("Risultato ", risultato)
+    li.innerHTML = risultato;
+    console.log(li);
 }
